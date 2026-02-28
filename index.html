@@ -7,19 +7,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-blue-600 flex items-center justify-center min-h-screen">
+<body class="bg-cyan-600 flex items-center justify-center min-h-screen">
 
 <div class="w-full max-w-xl bg-white rounded-xl shadow-xl p-6">
 
-    
     <div id="startScreen" class="text-center">
         <h1 class="text-2xl font-bold mb-4">Awesome Quiz Application</h1>
         <p class="mb-4 text-gray-600">You have 10 seconds per question.</p>
         <button onclick="startQuiz()" 
-            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            class="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700">
             Start Quiz
         </button>
     </div>
+
     <div id="quizScreen" class="hidden">
 
         <div class="flex justify-between items-center mb-4">
@@ -35,19 +35,18 @@
 
         <div class="text-right mt-4">
             <button id="nextBtn" onclick="nextQuestion()" 
-                class="bg-blue-600 text-white px-4 py-2 rounded-lg hidden">
+                class="bg-cyan-600 text-white px-4 py-2 rounded-lg hidden">
                 Next
             </button>
         </div>
 
     </div>
 
-
     <div id="resultScreen" class="hidden text-center">
         <h2 class="text-2xl font-bold mb-4">Quiz Completed</h2>
         <p id="scoreText" class="text-lg mb-4"></p>
         <button onclick="restartQuiz()" 
-            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            class="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700">
             Restart Quiz
         </button>
     </div>
@@ -57,5 +56,4 @@
 
 <script src="./script.js"></script>
 </body>
-
 </html>
