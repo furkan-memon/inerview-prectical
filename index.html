@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awesome Quiz Application</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-blue-600 flex items-center justify-center min-h-screen">
+
+<div class="w-full max-w-xl bg-white rounded-xl shadow-xl p-6">
+
+    <!-- ================= START SCREEN ================= -->
+    <div id="startScreen" class="text-center">
+        <h1 class="text-2xl font-bold mb-4">Awesome Quiz Application</h1>
+        <p class="mb-4 text-gray-600">You have 10 seconds per question.</p>
+        <button onclick="startQuiz()" 
+            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            Start Quiz
+        </button>
+    </div>
+
+    <!-- ================= QUIZ SCREEN ================= -->
+    <div id="quizScreen" class="hidden">
+
+        <div class="flex justify-between items-center mb-4">
+            <h2 id="questionCount" class="font-semibold"></h2>
+            <div class="bg-gray-200 px-3 py-1 rounded">
+                Time Left: <span id="timer">10</span>s
+            </div>
+        </div>
+
+        <h3 id="questionText" class="text-lg font-semibold mb-4"></h3>
+
+        <div id="optionsContainer" class="space-y-3"></div>
+
+        <div class="text-right mt-4">
+            <button id="nextBtn" onclick="nextQuestion()" 
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hidden">
+                Next
+            </button>
+        </div>
+
+    </div>
+
+    <!-- ================= RESULT SCREEN ================= -->
+    <div id="resultScreen" class="hidden text-center">
+        <h2 class="text-2xl font-bold mb-4">Quiz Completed</h2>
+        <p id="scoreText" class="text-lg mb-4"></p>
+        <button onclick="restartQuiz()" 
+            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            Restart Quiz
+        </button>
+    </div>
+
+</div>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
