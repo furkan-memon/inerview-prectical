@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+  
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded shadow">
+
+        <h1 class="text-xl font-bold text-center mb-4">Budget Tracker</h1>
+
+        <div class="flex flex-col gap-2 mb-4">
+
+            <input type="date" id="date" class="border p-2">
+
+            <input type="text" id="desc" placeholder="Description" class="border p-2">
+
+            <input type="number" id="amount" placeholder="Amount" class="border p-2">
+
+            <select id="sort" class="border p-2">
+                <option value="">Sort</option>
+                <option value="date">Date</option>
+                <option value="amount">Amount</option>
+            </select>
+
+            <button id="addBtn" class="bg-blue-600 text-white rounded">
+                Add
+            </button>
+
+        </div>
+
+        <p class="text-right mb-3 font-semibold">
+            Total: ₹ <span id="total">0</span>
+        </p>
+
+        <table class="w-full border text-sm">
+
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="border p-2">Date</th>
+                    <th class="border p-2">Description</th>
+                    <th class="border p-2">Amount</th>
+                    <th class="border p-2">Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="table"></tbody>
+
+        </table>
+
+        <div class="mt-4 flex gap-3">
+
+            <button id="resetBtn" class="bg-red-500 text-white px-4 py-2 rounded">
+                Reset
+            </button>
+
+            <button id="exportBtn" class="bg-green-600 text-white px-4 py-2 rounded">
+                Export CSV
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
