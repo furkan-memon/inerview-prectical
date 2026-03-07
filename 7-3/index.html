@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Tracker</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-blue-200 to-blue-100 min-h-screen flex items-center justify-center">
+
+<div class="bg-white p-6 rounded-xl shadow-lg w-[900px]">
+
+<h1 class="text-2xl font-bold text-center mb-6">Budget Tracker System</h1>
+
+<div class="grid grid-cols-3 gap-4">
+
+<div class="space-y-4">
+
+<div class="bg-gray-100 p-4 rounded-lg shadow">
+<h2 class="font-semibold mb-2">Add Budget</h2>
+
+<label class="text-sm">Budget:</label>
+<input type="number" id="budgetInput" class="w-full border rounded p-2 mb-2">
+
+<button id="addBudgetBtn" class="w-full bg-cyan-500 text-white py-2 rounded hover:bg-cyan-600">
+Add Budget
+</button>
+</div>
+
+<div class="bg-gray-100 p-4 rounded-lg shadow">
+<h2 class="font-semibold mb-2">Add Expense</h2>
+
+<label class="text-sm">Expense Title:</label>
+<input type="text" id="expenseName" class="w-full border rounded p-2 mb-2">
+
+<label class="text-sm">Amount:</label>
+<input type="number" id="expenseAmount" class="w-full border rounded p-2 mb-2">
+
+<button id="addExpenseBtn" class="w-full bg-cyan-500 text-white py-2 rounded hover:bg-cyan-600">
+Add Expense
+</button>
+</div>
+
+<button id="resetBtn" class="w-full bg-cyan-500 text-white py-2 rounded hover:bg-cyan-600">
+Reset All
+</button>
+
+</div>
+
+<div class="col-span-2 space-y-4">
+
+<div class="grid grid-cols-3 gap-3 text-center">
+
+<div class="bg-blue-100 p-3 rounded">
+<p class="text-sm">Total Budget</p>
+<p class="font-bold" id="totalBudget">0</p>
+</div>
+
+<div class="bg-blue-100 p-3 rounded">
+<p class="text-sm">Total Expenses</p>
+<p class="font-bold" id="totalExpenses">0</p>
+</div>
+
+<div class="bg-blue-100 p-3 rounded">
+<p class="text-sm">Budget Left</p>
+<p class="font-bold" id="budgetLeft">0</p>
+</div>
+
+</div>
+
+<div class="bg-gray-50 p-4 rounded shadow">
+
+<h2 class="font-semibold mb-3">Expense History</h2>
+
+<table class="w-full text-sm">
+
+<thead class="border-b">
+<tr>
+<th class="text-left py-2">Expense Name</th>
+<th class="text-left">Amount</th>
+<th class="text-left">Action</th>
+</tr>
+</thead>
+
+<tbody id="expenseList"></tbody>
+
+</table>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
